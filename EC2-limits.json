@@ -2,13 +2,13 @@
   "Version": "2012-10-17",
   "Statement": [
     {
-      "Sid": "Stmt1423592533000",
-      "Effect": "Allow",
+      "Sid": "ec2-instance-whitelist20150210",
+      "Effect": "Deny",
       "Action": [
         "ec2:RunInstances"
       ],
       "Condition": {
-        "StringEquals": {
+        "StringNotEquals": {
           "ec2:InstanceType": [
             "t1.micro",
             "m1.small",
@@ -20,7 +20,7 @@
         }
       },
       "Resource": [
-        "*"
+        "arn:aws:ec2:*:*:*/*"
       ]
     }
   ]
