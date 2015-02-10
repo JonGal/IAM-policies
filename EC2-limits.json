@@ -1,0 +1,27 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "Stmt1423592533000",
+      "Effect": "Allow",
+      "Action": [
+        "ec2:RunInstances"
+      ],
+      "Condition": {
+        "StringEquals": {
+          "ec2:InstanceType": [
+            "t1.micro",
+            "m1.small",
+            "t2.micro",
+            "t2.small",
+            "t2.medium",
+            "m3.medium"
+          ]
+        }
+      },
+      "Resource": [
+        "*"
+      ]
+    }
+  ]
+}
